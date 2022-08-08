@@ -1,5 +1,5 @@
 // quotes within a string
-const myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
+let myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
 console.log(myStr+'\n');
 
 // escape characters (\) in a string
@@ -50,3 +50,44 @@ let extractStr = "Extract the word 'coding' from this string.";
 console.log(extractStr);
 let codingRegex = /coding/i;console.log(codingRegex);
 result = extractStr.match(codingRegex);console.log(result);
+console.log('\n')
+
+// change a value in an array by index
+const myArray = [18, 64, 99];console.log(myArray)
+myArray[0]=45;console.log(myArray);
+console.log('\n')
+
+// variables set without (let) or (const) are global,
+// even with a function, they can affect other functions
+// you want to use (let) and (const) to avoid this
+// (let) and (const) can still be global when outside a function
+// Declare the myGlobal variable below this line
+let myGlobal=10;
+
+function fun1() {
+  // Assign 5 to oopsGlobal Here
+oopsGlobal = 5;
+}
+
+// Only change code above this line
+
+function fun2() {
+  var output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+fun2()
+console.log('\n');
+
+// strings cannot be mutated or changed, you can only assign a new string
+// Setup
+myStr = "Jello World";
+
+// Only change code below this line
+myStr = "Hello World"; // Change this line
+// Only change code above this line
